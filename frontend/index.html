@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>__EAGLEYES__</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Fira Code', monospace;
+        }
+        #map {
+            flex: 1;
+        }
+        #info {
+            padding: 20px;
+            background: #333;
+            color: white;
+            border-top: 1px solid #444;
+            overflow: auto;
+        }
+        #geolocate-btn {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media (min-width: 768px) {
+            body {
+                flex-direction: row;
+            }
+            #info {
+                width: 300px;
+                border-top: none;
+                border-left: 1px solid #444;
+                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="info">
+        <h2>   __eagleyes__</h2>
+        <p id="coordinates">Coordinates: </p>
+        <p id="address">Address: </p>
+        <button id="geolocate-btn">Show My Location</button>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="geolock.js"></script>
+</body>
+</html>
